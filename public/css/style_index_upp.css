@@ -94,7 +94,7 @@ html,body{
     height: 35px;
     width:  35px;
     margin-right: 5px;
-    background-image: url(/img/russia.png);
+    background-image: url(/img/russia_2.svg);
     outline: none;
     border: none;
     border-radius: 5px;
@@ -115,7 +115,7 @@ html,body{
     height: 35px;
     width:  35px;
     margin-left:5px; 
-    background-image: url(/img/eng.png);
+    background-image: url(/img/eng_2.svg);
     outline: none;
     border: none;
     border-radius: 5px;
