@@ -166,7 +166,7 @@ footer - нижняя часть страницы(пустая)
                     <div id="2" class="NewExpand"></div>
                     <div class="NewContent"><h2><?=$lang_array['syntax_lang']?></h2></div>
                     <div class="TextContainer">
-                        <?=$cont['function_syntax']?>
+                        <p class="in_syntax_content"><?=$cont['function_syntax']?></p>
                     </div>
                 </div>
             </div>
