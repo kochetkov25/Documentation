@@ -1,4 +1,5 @@
 extra/
 .idea/
+app/
 *.sublime-project
 *.sublime-workspace

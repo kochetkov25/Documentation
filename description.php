@@ -36,6 +36,12 @@
         $par_sql = mysqli_query($link, "SELECT * FROM `connection_ru` WHERE `function_title` LIKE '$_GET[id]'");
         $cont = mysqli_fetch_assoc($par_sql);
     }
+
+    var_dump("session");
+    var_dump($_SESSION["lang"]);
+    var_dump("post");
+    var_dump($_POST["lang"]);
+
     require 'language.php';
     global $lang_array;
 ?>

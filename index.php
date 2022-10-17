@@ -11,11 +11,21 @@
         header("Location: ./index.php");
     }
 
+//установка языка при первом открытии страницы
+    if(empty($_SESSION["lang"]))
+    {
+        $_SESSION["lang"]="ru";
+    }
+
     if(!empty($_POST["lang"]))
     {
         $_SESSION["lang"]=$_POST["lang"];
         header("Location: ".$_SERVER["REQUEST_URI"]);
         exit;
+    }
+    else
+    {
+
     }
 
     if(!empty($_POST["text"])&&!empty($_POST["enter"]))
@@ -48,6 +58,11 @@
     }
     require 'language.php';
     global $lang_array;
+
+    var_dump("session");
+    var_dump($_SESSION["lang"]);
+    var_dump("post");
+    var_dump($_POST["lang"]);
 ?>
 
 
