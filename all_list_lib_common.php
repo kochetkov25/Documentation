@@ -5,8 +5,8 @@ global $lang_array;
 global $link;
 global $sql;
 global $request;
-$request="SELECT `function_title`,`type` FROM `connection`";
-$sql=mysqli_query($link,"SELECT `function_title`,`type` FROM `connection`");
+$request="SELECT `function_title`,`type` FROM `connection` ORDER BY `function_title`";
+$sql=mysqli_query($link,"SELECT `function_title`,`type` FROM `connection` ORDER BY `function_title`");
 while($count=mysqli_fetch_assoc($sql)):
                 if($count["type"]=="function"):
                     ?>

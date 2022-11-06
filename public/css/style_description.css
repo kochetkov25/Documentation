@@ -3,7 +3,16 @@ html,body{
     background: #4682B4;
 }
 
+/*подключение шрифта*/
+@font-face {
+    font-family: Montserrat-Medium; /* Гарнитура шрифта */
+    src: url(./../fonts/Montserrat-Medium.ttf); /* Путь к файлу со шрифтом */
+}
 
+@font-face {
+    font-family: Hack-Regular; /* Гарнитура шрифта */
+    src: url(./../fonts/Hack-Regular.ttf); /* Путь к файлу со шрифтом */
+}
 
 /*стиль общего контейнера начало*/
 .container {
@@ -73,10 +82,13 @@ html,body{
 
 .main_title{/*кастомизация блока, отведенного под слово "документация"*/
     text-align: left;
-    color: white;
-    font-family: sans-serif;
-    font-size: xx-large;
+    /*word-wrap: break-word;*/
+    font-family: Montserrat-Medium;
+    font-size: 20px;
     max-width: 500px;
+    /*margin-bottom: 0;
+    margin-top: 1rem;
+    margin-right: 10px;*/
     color: #FFFFFF;;
 }
 
@@ -163,7 +175,7 @@ html,body{
     grid-area: name;
     margin-left: 5px;
     margin-top: 10px;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
     font-size: 16px;
     font-weight: 510;
 }
@@ -196,7 +208,7 @@ html,body{
     height: 100%;
     border-radius: 0 5px 5px 0;
     margin-right: 5px; 
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
     border: 0;
     background: #4682B4;
     color: #fff;
@@ -208,7 +220,8 @@ html,body{
 
 .btn:focus{
     outline: none;
-    box-shadow: 0 1px 0 1px #cbd6ee;
+    /*box-shadow: 0 1px 0 1px #cbd6ee;*/
+    background: #122faa;
 }
 
 .search{ /*строка*/
@@ -218,7 +231,7 @@ html,body{
     height: 100%;
     border-radius: 5px 0 0 5px;
     margin-left: 5px;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
     font-weight: 100;
 }
 
@@ -265,14 +278,14 @@ html,body{
 }
 
 .content h2{
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
     font-size: 140%;
 }
 
 .syntax_content a{
     text-decoration: none;
     color: #000000;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
 }
 
 .syntax_content a:hover{
@@ -285,7 +298,7 @@ html,body{
     margin-bottom: 0;
     margin-top: 10px;
     margin-left: 10px;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
     font-size: 40px;
 }
 
@@ -293,7 +306,7 @@ html,body{
     grid-area: dc;
     margin-left: 10px;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
 }
 
 .syntax_content{
@@ -301,21 +314,21 @@ html,body{
     word-wrap: break-word;
     margin-left: 10px;
     font-size: 16px;
-    font-family: system-ui;
+    font-family: Hack-Regular;
 }
 
 .parameters_content{
     grid-area: pc;
     margin-left: 10px;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
 }
 
 .return_values_content{
     grid-area: rv;
     margin-left: 10px;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
 }
 
 .function_example_content{
@@ -323,7 +336,7 @@ html,body{
     overflow-x: hidden;
     margin-left: 10px;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
     margin-bottom: 5px;
 }
 /*соврачиваемые блоки на основной части страницы начало*/
@@ -333,7 +346,7 @@ html,body{
     grid-column: 6/7;
     word-wrap: break-word;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
  }
 
 .NewNode{
@@ -411,14 +424,14 @@ html,body{
     padding: 0;
     margin:0;
     grid-column: 6/7;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
     font-size: 18px;
     font-weight: normal;
 }
 
 .MainContainer li{
     margin-top: 15px;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
     list-style-type: none;
 }
 
@@ -445,7 +458,7 @@ html,body{
 .Content a{
     text-decoration: none;
     color: #000000;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
 }
 
 .Content a:hover{
@@ -521,14 +534,19 @@ border-top: 2px solid #BBBBBB;
 /*ни с чем не связанные стили конец*/
 
 
-.description_content a{
+.content a{
     text-decoration: none;
     color: #000000;
-    font-family: sans-serif;
+    font-family: Montserrat-Medium;
 }
 
-.description_content a:hover{
+.content a:hover{
     text-decoration: none;
-    border-bottom: 1.7px solid #000000;
-    padding-bottom: 1.5px;
+    border-bottom: 0.50px solid #000000;
+    padding-bottom: 1.0px;
+}
+
+.in_syntax_content{
+    font-family: Hack-Regular;
+    font-size: 16px;
 }

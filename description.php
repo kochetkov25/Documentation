@@ -73,7 +73,7 @@ footer - нижняя часть страницы(пустая)
     -->
     <div class="header">
 
-        <div class="logo">
+        <div class="logo" id="1234">
             <a href="index.php?par=off"><img src="img/rpkb_2_app.svg"></a>
         </div>
 
