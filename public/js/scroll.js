@@ -1,13 +1,7 @@
 
 window.addEventListener("load",function(){
 
-	/*var logoClick=document.getElementById("1234");
-	logoClick.addEventListener("click",function(){
-		localStorage.status=null;
-		document.getElementById("12").className="Node IsRoot ExpandClosed";
-	});*/
-
-	if(localStorage.getItem("status")!=null)
+	if(localStorage.getItem("status")!=null)/*если на прошлой странице состояние окна было установлено не null, то на текущей странице устанавливается то же состояние, что и на прошлой*/
 	{
 		document.getElementById("12").className=localStorage.getItem("status");
 	}
@@ -32,5 +26,5 @@ document.addEventListener("click",function(e){
 	{
 		document.getElementById("12").className="Node IsRoot ExpandOpen";
 	}
-	localStorage.setItem("status",document.getElementById("12").className);
+	localStorage.setItem("status",document.getElementById("12").className);/*сохранение состояния выпадающего меню (открыто/закрыто)*/
 })

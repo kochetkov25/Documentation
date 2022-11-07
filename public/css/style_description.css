@@ -522,6 +522,7 @@ html,body{
 
 
 /*ни с чем не связанные стили начало*/
+/*Начало. Добавление стилей для горизонтальных линий*/
 .hr-double {
 margin-top:20px;
 margin-left: 5px;
@@ -531,22 +532,31 @@ height: 0;
 border: none;
 border-top: 2px solid #BBBBBB;
 }
-/*ни с чем не связанные стили конец*/
+/*Конец.Добавление стилей для горизонтальных линий*/
 
 
+/* Начало. Добавление ссылкам нормальное отображение*/
 .content a{
     text-decoration: none;
     color: #000000;
     font-family: Montserrat-Medium;
+    border-bottom: 0.50px solid #000000;
+    padding-bottom: 0.0px;
 }
 
 .content a:hover{
     text-decoration: none;
+    color: #666666;
     border-bottom: 0.50px solid #000000;
     padding-bottom: 1.0px;
 }
+/*Конец. Добавление ссылкам нормальное отображение*/
 
+/*Начало. Добавление блоку с синтаксисом функции нового шрифта и размера*/
 .in_syntax_content{
     font-family: Hack-Regular;
     font-size: 16px;
 }
+/*Конец. Добавление блоку с синтаксисом функции нового шрифта и размера*/
+
+/*ни с чем не связанные стили конец*/
