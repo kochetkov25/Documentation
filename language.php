@@ -26,7 +26,7 @@ else
         'description_lang'=>"Описание",
         'syntax_lang'=>"Синтаксис",
         'parameters_lang'=>"Параметры",
-        "return_values_lang"=>"Возвращаемые значения",
+        "return_values_lang"=>"Графическое отображение",
         "information_lang"=>"Информация",
         "contacts_lang"=>"Контакты",
         "documentation_lang"=>"Техническая документация на графическую библиотеку с использованием OpenGL разработки РПКБ",
