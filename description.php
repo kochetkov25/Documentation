@@ -120,21 +120,37 @@ footer - нижняя часть страницы(пустая)
             </ul>
             <hr class="hr-double">
         </div>
-
+<!--Начало тестов-->
         <div class="list">
             <ul class="MainContainer">
-                <li id="12" class="Node IsRoot ExpandClosed">
+                <li id="0" class="Node_0 IsRoot ExpandClosed">
                     <div class="Expand"></div>
                     <div class="Content">lib_common</div>
                     <ul class="MainContainer">
-                        <li class="Node ExpandLeaf">
-                            <?php require 'all_list_lib_common.php'?>
+                        <li id="1" class="Node_1 IsRoot ExpandClosed" style="margin-left: 20px">
+                            <div class="Expand"></div>
+                            <div class="Content">Общие функции и типы данных</div>
+                            <ul class="MainContainer">
+                                <li class="Node ExpandLeaf">
+                                <?php require 'all_list_lib_common.php'?>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="2" class="Node_2 IsRoot ExpandClosed" style="margin-left: 20px">
+                            <div class="Expand"></div>
+                            <div class="Content">Графические функции</div>
+                            <ul class="MainContainer">
+                                <li class="Node ExpandLeaf">
+                                <?php require 'all_list_lib_common.php'?>
+                                </li>
+                            </ul>
                         </li>
                     </ul>   
                 </li>
             </ul>
         </div>
-
+<!--Конец тестов-->
     </div>
     <!--content - правая часть страницы, отведенная под предоставление информации о функции. Разбита на шесть подклассов:
     name_content - заголовочная надпись. Название текущей функции

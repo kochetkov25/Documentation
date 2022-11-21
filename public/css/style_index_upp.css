@@ -373,15 +373,15 @@ html,body{
 }
 
 .ExpandOpen .Expand{
-    background-image: url(/img/minus.png);
+    background-image: url(/img/minus_new.svg);
 }
 
 .ExpandClosed .Expand{
-    background-image: url(/img/plus.png);
+    background-image: url(/img/plus_new.svg);
 }
 
 .ExpandLeaf .Expand{
-    background-image: url(/img/leaf.png);
+    background-image: url(/img/leaf_new.svg);
 }
 
 .ExpandOpen .MainContainer{
