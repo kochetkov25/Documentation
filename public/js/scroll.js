@@ -1,13 +1,17 @@
-
+/*функция срабатывает, когда страница полностью прогружена*/
 window.addEventListener("load",function(){
-
-	if(localStorage.getItem("status")!=null)/*если на прошлой странице состояние окна было установлено не null, то на текущей странице устанавливается то же состояние, что и на прошлой*/
-	{
-		document.getElementById("12").className=localStorage.getItem("status");
+/*пробегаем по всем возможным id для веток, и меняем их класс на класс из локального хранилища, в случае 
+если класс ветки изначально не был null. null означает, что страницу только открыли и пытаться менять на ней 
+класс не требуется*/
+for(var i=0;i<3;i++){
+	if(localStorage.getItem("status_"+i)!=null){
+		document.getElementById(localStorage.getItem("elem_"+i)).className=localStorage.getItem("status_"+i);
 	}
+}
+
 });
 
-
+/*функция срабатывает при клике на любой элемент на странице index или description*/
 document.addEventListener("click",function(e){
 	e=window.event;
 
@@ -21,26 +25,24 @@ document.addEventListener("click",function(e){
 		return;
 	}
 
-	//if(clickedElem.closest('.ExpandOpen')){ /*смена класса*/
-		//document.getElementById("12").className="Node IsRoot ExpandClosed";
-	//}
-	//else
-	//{
-		//document.getElementById("12").className="Node IsRoot ExpandOpen";
-	//}
-
+/*смена класса у контейнера для его открытия/закрытия.
+если кликнули по элементу, дочернему к элементу с классом "IsRoot(является веткой) ExpandClosed(ветка закрыта)"
+то создаем переменную parent, записываем в нее класс родитель (очевидно, что картинка (+ или -) является 
+дочерней к самой ветке.) далее меняем класс родителя на "Node IsRoot ExpandOpen" иначе на "Node IsRoot ExpandClosed"*/
 if(clickedElem.closest('.IsRoot') && clickedElem.closest('.ExpandClosed')){
 	var parent=clickedElem.parentNode;
 	parent.className="Node IsRoot ExpandOpen";
-	console.log("yes");
 }
 else
 {
 	var parent=clickedElem.parentNode;
 	parent.className="Node IsRoot ExpandClosed";
-	console.log("n0");
 }
 
-
-	localStorage.setItem("status",document.getElementById("12").className);/*сохранение состояния выпадающего меню (открыто/закрыто)*/
+/*Чтобы оставить меню открытым при переходе на другую страницу, записываем в локальное хранилище id класса родителя
+и имя класса родителя, в последствии будем получать на новой странице класс родитель по id, и менять его класс 
+на класс, сохраненный в локальном хранилище*/
+	var id=parent.id;
+	localStorage.setItem("elem_"+id,id);
+	localStorage.setItem("status_"+id,parent.className);/*сохранение состояния выпадающего меню (открыто/закрыто)*/
 })
