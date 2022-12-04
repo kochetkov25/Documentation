@@ -29,7 +29,7 @@ else
         "return_values_lang"=>"Графическое отображение",
         "information_lang"=>"Информация",
         "contacts_lang"=>"Контакты",
-        "documentation_lang"=>"Техническая документация на графическую библиотеку с использованием OpenGL разработки РПКБ",
+        "documentation_lang"=>"<span style='font-size:26px;'>Техническая документация</span><br><span style='font-size:16px';>на графическую библиотеку с использованием OpenGL разработки РПКБ</span>",
         "documentation_list_lang"=>"Поиск по всем библиотекам:",
         "main_lang"=>"Вернуться на главную",
         "search_lang"=>"Найти",

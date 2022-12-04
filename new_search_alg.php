@@ -35,13 +35,13 @@ if(isset($sql)):
             <?php
         endif;
             while($count=mysqli_fetch_assoc($sql)):
-                if($count["type"]=="function"):
+                //if($count["type"]=="function"):
                     ?>
                     <div class="Expand"></div>
                     <div class="Content">
                     <a href="./description.php?id=<?=$count["function_title"]?>" class="ref_menu"><?=$count["function_title"]?></a></div>
                     <?php
-                endif;
+                //endif;
             endwhile;
 endif;
             ?>

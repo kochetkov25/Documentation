@@ -44,6 +44,8 @@ html,body{
             "f f f f f f f f f f f f";
     }
 }
+
+
 /*стиль общего контейнера конец*/
 
 
@@ -76,14 +78,11 @@ html,body{
 }
 
 .main_title{/*кастомизация блока, отведенного под слово "документация"*/
-    text-align: left;
-    /*word-wrap: break-word;*/
+    margin-left: 15px;
+    text-align: justify;
     font-family: Montserrat-Medium;
-    font-size: 20px;
+    font-size: 18px;
     max-width: 500px;
-    /*margin-bottom: 0;
-    margin-top: 1rem;
-    margin-right: 10px;*/
     color: #FFFFFF;;
 }
 
@@ -142,7 +141,6 @@ html,body{
 /*начало стиля для левой части экрана, отведенной под навигацию*/
 .menu {
     overflow: auto;
-    overflow-y: scroll;
     min-width: 340px;
     grid-area: m;
     background: #FFFFFF;
@@ -243,9 +241,10 @@ html,body{
 
 .list{ /*контейнер для развертываемой таблицы всех функций в библиотеке*/
     grid-area: list;
-    display: grid;
+    display: inline-block;
     justify-content: start;
     margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 5px;
     background: #FFFFFF;
 
@@ -433,3 +432,68 @@ border: none;
 border-top: 2px solid #BBBBBB;
 }
 /*ни с чем не связанные стили конец*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*реализация табов (надо подредактировать)*/
+.tabs{
+    font-family: Montserrat-Medium;
+    font-size: 0;
+  }
+
+  .tabs>input[type="radio"] {
+    display: none;
+  }
+
+  .tabs>div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+  #tab-btn-1:checked~#content-1,
+  #tab-btn-2:checked~#content-2,
+  #tab-btn-3:checked~#content-3 {
+    display: block;
+  }
+
+  .tabs>label {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    padding: 2px 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+  }
+
+  .tabs>label:not(:first-of-type) {
+    border-left: none;
+  }
+
+  .tabs>input[type="radio"]:checked+label {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;

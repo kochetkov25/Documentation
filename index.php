@@ -73,7 +73,7 @@
     <!--Подключение img и скриптов-->
     <title></title>
     <link rel="stylesheet" href="./public/css/style_index_upp.css">
-    <link rel="icon" href="img/ico.png" type="image/x-icon">
+    <link rel="icon" href="img/ico_new.svg" type="image/x-icon">
     <script type="text/javascript" src="./public/js/scroll.js"></script>
 </head>
 
@@ -141,33 +141,49 @@ footer - нижняя часть страницы(пустая)
         </div>
 <!--Начало тестов-->
         <div class="list">
-            <ul class="MainContainer">
-                <li id="0" class="Node_0 IsRoot ExpandClosed">
-                    <div class="Expand"></div>
-                    <div class="Content">lib_common</div>
-                    <ul class="MainContainer">
-                        <li id="1" class="Node_1 IsRoot ExpandClosed" style="margin-left: 20px">
-                            <div class="Expand"></div>
-                            <div class="Content">Общие функции и типы данных</div>
-                            <ul class="MainContainer">
-                                <li class="Node ExpandLeaf">
-                                <?php require 'all_list_lib_common.php'?>
-                                </li>
-                            </ul>
-                        </li>
+            <div class="tabs">
+                <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                <label for="tab-btn-1">Библиотеки</label>
+                <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                <label for="tab-btn-2">Вкладка 2</label>
+                <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                <label for="tab-btn-3">Вкладка 3</label>
+                    <div id="content-1">
+                        <ul class="MainContainer">
+                            <li id="0" class="Node_0 IsRoot ExpandClosed">
+                                    <div class="Expand"></div>
+                                    <div class="Content">lib_common</div>
+                                    <ul class="MainContainer">
+                                        <li id="1" class="Node_1 IsRoot ExpandClosed" style="margin-left: 20px">
+                                            <div class="Expand"></div>
+                                            <div class="Content">Общие функции и типы данных</div>
+                                            <ul class="MainContainer">
+                                                <li class="Node ExpandLeaf">
+                                                    <?php require 'list_of_all_common_func.php'?>
+                                                </li>
+                                            </ul>
+                                        </li>
 
-                        <li id="2" class="Node_2 IsRoot ExpandClosed" style="margin-left: 20px">
-                            <div class="Expand"></div>
-                            <div class="Content">Графические функции</div>
-                            <ul class="MainContainer">
-                                <li class="Node ExpandLeaf">
-                                <?php require 'all_list_lib_common.php'?>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>   
-                </li>
-            </ul>
+                                        <li id="2" class="Node_2 IsRoot ExpandClosed" style="margin-left: 20px">
+                                            <div class="Expand"></div>
+                                            <div class="Content">Графические функции</div>
+                                            <ul class="MainContainer">
+                                                <li class="Node ExpandLeaf">
+                                                <?php require 'list_of_all_graphics_func.php'?>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>   
+                            </li>
+                        </ul>                  
+                    </div>
+                    <div id="content-2">
+                        Содержимое 2...
+                    </div>
+                    <div id="content-3">
+                        Содержимое 3...
+                    </div>
+            </div>
         </div>
 <!--Конец тестов-->
     </div>

@@ -16,9 +16,9 @@ html,body{
 
 /*стиль общего контейнера начало*/
 .container {
-    min-height: 100%;
+    height: 100%;
+    /*min-height: 100%;*/
     min-width: 700px;
-    /*min-height: 500px;*/
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 80px 1fr 50px;
@@ -81,14 +81,12 @@ html,body{
 }
 
 .main_title{/*кастомизация блока, отведенного под слово "документация"*/
-    text-align: left;
-    /*word-wrap: break-word;*/
+    margin-left: 15px;
+    text-align: justify;
     font-family: Montserrat-Medium;
-    font-size: 20px;
+    /*font-size: 18px;*/
     max-width: 500px;
-    /*margin-bottom: 0;
-    margin-top: 1rem;
-    margin-right: 10px;*/
+    max-height: 82px;
     color: #FFFFFF;;
 }
 
@@ -147,8 +145,6 @@ html,body{
 /*начало стиля для левой части экрана, отведенной под навигацию*/
 .menu {
     overflow: auto;
-    overflow-y: scroll;
-    height: 100%;
     min-width: 340px;
     grid-area: m;
     background: #FFFFFF;
@@ -215,13 +211,13 @@ html,body{
 }
 
 .btn:hover{
-    background: #1d49aa;
+    background: #2e6694;
 }
 
 .btn:focus{
     outline: none;
     /*box-shadow: 0 1px 0 1px #cbd6ee;*/
-    background: #122faa;
+    background: #366b91;
 }
 
 .search{ /*строка*/
@@ -249,12 +245,12 @@ html,body{
 
 .list{ /*контейнер для развертываемой таблицы всех функций в библиотеке*/
     grid-area: list;
-    display: grid;
+    display: inline-block;
     justify-content: start;
     margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 5px;
     background: #FFFFFF;
-
 }
 /*конец стиля для левой части экрана, отведенной под навигацию*/
 
@@ -264,10 +260,10 @@ html,body{
 .content {
     grid-area: c;
     background: #FFFFFF;
+    min-width: 270px;
     margin-left: 18px;
-    height: 100%;
     display: grid;
-    grid-template-columns: repeat(1, minmax(0px, 1fr));
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
     grid-template-areas:
         "nc"
         "dc"
@@ -276,6 +272,7 @@ html,body{
         "rv"
         "ec";
 }
+
 
 .content h2{
     font-family: Montserrat-Medium;
@@ -298,21 +295,26 @@ html,body{
     margin-bottom: 0;
     margin-top: 10px;
     margin-left: 10px;
+    margin-right: 10px;
     font-family: Montserrat-Medium;
     font-size: 40px;
 }
 
 .description_content{
     grid-area: dc;
+    height: auto;
     margin-left: 10px;
+    margin-right: 10px;
     font-size: 16px;
     font-family: Montserrat-Medium;
 }
 
 .syntax_content{
     grid-area: sy;
+    height: auto;
     word-wrap: break-word;
     margin-left: 10px;
+    margin-right: 10px;
     font-size: 16px;
     font-family: Hack-Regular;
 }
@@ -320,6 +322,7 @@ html,body{
 .parameters_content{
     grid-area: pc;
     margin-left: 10px;
+    margin-right: 10px;
     font-size: 16px;
     font-family: Montserrat-Medium;
 }
@@ -327,6 +330,7 @@ html,body{
 .return_values_content{
     grid-area: rv;
     margin-left: 10px;
+    margin-right: 10px;
     font-size: 16px;
     font-family: Montserrat-Medium;
 }
@@ -335,18 +339,25 @@ html,body{
     grid-area: ec;
     overflow-x: hidden;
     margin-left: 10px;
+    margin-right: 10px;
     font-size: 16px;
     font-family: Montserrat-Medium;
     margin-bottom: 5px;
 }
 /*соврачиваемые блоки на основной части страницы начало*/
- .TextContainer{
+ .TextContainer{    
     padding: 0;
     margin:0;
     grid-column: 6/7;
     word-wrap: break-word;
     font-size: 16px;
     font-family: Montserrat-Medium;
+ }
+
+ #code_content{
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 15%);
+    border-radius: 0 0 2px 2px;
+    background-color: #F2F2F2;
  }
 
 .NewNode{
@@ -370,11 +381,11 @@ html,body{
 }
 
 .ExpandOpen .NewExpand{
-    background-image: url(/img/minus.png);
+    background-image: url(/img/minus_new.svg);
 }
 
 .ExpandClosed .NewExpand{
-    background-image: url(/img/plus.png);
+    background-image: url(/img/plus_new.svg);
 }
 
 .ExpandOpen .TextContainer{
@@ -516,6 +527,7 @@ html,body{
     border-radius: 50px;
     border:5px solid transparent;
     border-color: #7BB0D8;
+    background-color: #7BB0D8;
 }
 /*стили для скроллбаров конец*/
 
@@ -554,9 +566,82 @@ border-top: 2px solid #BBBBBB;
 
 /*Начало. Добавление блоку с синтаксисом функции нового шрифта и размера*/
 .in_syntax_content{
+    margin-left: 7px;
     font-family: Hack-Regular;
     font-size: 16px;
+}
+
+.in_function_example{
+    margin-left: 7px;
 }
 /*Конец. Добавление блоку с синтаксисом функции нового шрифта и размера*/
 
 /*ни с чем не связанные стили конец*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*реализация табов (надо подредактировать)*/
+.tabs{
+    font-family: Montserrat-Medium;
+    font-size: 0;
+  }
+
+  .tabs>input[type="radio"] {
+    display: none;
+  }
+
+  .tabs>div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+  #tab-btn-1:checked~#content-1,
+  #tab-btn-2:checked~#content-2,
+  #tab-btn-3:checked~#content-3 {
+    display: block;
+  }
+
+  .tabs>label {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    padding: 2px 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+  }
+
+  .tabs>label:not(:first-of-type) {
+    border-left: none;
+  }
+
+  .tabs>input[type="radio"]:checked+label {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
