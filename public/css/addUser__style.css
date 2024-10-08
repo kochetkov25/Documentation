@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #71b7e6, whitesmoke);
+  }
+  .container{
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+  .container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  .container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1.5px;
+    width: 60px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, whitesmoke);
+  }
+  .content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+  form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  form .input-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .user-details .input-box input:focus,
+  .user-details .input-box input:valid{
+    border-color: #24abf2;
+  }
+   form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+   }
+   form .category{
+     display: flex;
+     width: 80%;
+     margin: 14px 0 ;
+     justify-content: space-between;
+   }
+   form .category label{
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+   }
+   form .category label .dot{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+  }
+   #dot-1:checked ~ .category label .one,
+   #dot-2:checked ~ .category label .two,
+   #dot-3:checked ~ .category label .three{
+     background: #9b59b6;
+     border-color: #d9d9d9;
+   }
+   form input[type="radio"]{
+     display: none;
+   }
+   form .button{
+     height: 45px;
+     margin-bottom: 35px;
+   }
+   form .button input{
+     height: 100%;
+     width: 100%;
+     border-radius: 5px;
+     border: none;
+     color: #fff;
+     font-size: 18px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     background: linear-gradient(135deg, #71b7e6, whitesmoke);
+   }
+   form .button input:hover{
+    /* transform: scale(0.99); */
+    background: linear-gradient(-135deg, #71b7e6, whitesmoke);
+    }
+   @media(max-width: 584px){
+   .container{
+    max-width: 100%;
+  }
+  form .user-details .input-box{
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    form .category{
+      width: 100%;
+    }
+    .content form .user-details{
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+      width: 5px;
+    }
+    }
+    @media(max-width: 459px){
+    .container .content .category{
+      flex-direction: column;
+    }
+  }
+  
+  .status-message{
+    font-size: large;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    animation: ani 2.5s forwards;
+  }
+
+  @keyframes ani{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  .backRef{
+    text-decoration: none;
+    color: #71b7e6;
+    font-size: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .backRef:hover{
+    cursor: pointer;
+    color: #9ccdee;
+  }
+
+  .usersTable table{
+    width: 100%;
+    border-spacing: 0;
+    margin-top: 20px;
+    border: 1.5px solid #ccc;
+    border-collapse: separate;
+    border-radius: 10px;
+
+    outline: none;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .usersTable th{
+    text-align: left;
+    padding-left: 5px;
+    font-weight: normal;
+    font-size: 18px;
+
+    border-bottom: 1.5px solid #ccc;
+  }
+
+  .usersTable th:not(:last-child){
+    border-right: 1.5px solid #ccc;
+  }
+
+  .usersTable td{
+    padding-left: 5px;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .usersTable td:not(:last-child){
+    border-right: 1.5px solid #ccc;
+  }
+
+
+.usersTable table>thead>tr:not(:last-child)>th,
+.usersTable table>thead>tr:not(:last-child)>td,
+.usersTable table>tbody>tr:not(:last-child)>th,
+.usersTable table>tbody>tr:not(:last-child)>td,
+.usersTable table>tfoot>tr:not(:last-child)>th,
+.usersTable table>tfoot>tr:not(:last-child)>td,
+.usersTable table>tr:not(:last-child)>td,
+.usersTable table>tr:not(:last-child)>th,
+.usersTable table>thead:not(:last-child),
+.usersTable table>tbody:not(:last-child),
+.usersTable table>tfoot:not(:last-child) {
+ border-bottom: 1.5px solid #ccc;
+}
+
+.usersTable caption{
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.deleteButton{
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+
+  font-size: 16px;
+  border:1px solid #a8d1ec;
+  border-radius: 7px;
+  padding: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.deleteButton:hover{
+  color:#77bae7;
+  border:1px solid #fff;
+  transition: all 0.18s ease;
+}
+
+.deleteButton:focus{
+  color:#006eb1;
+  border:1px solid #fff;
+}

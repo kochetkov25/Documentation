@@ -1,0 +1,19 @@
+{
+    "name": "kkochetkov/rdc.com",
+    "description": "Loading main classes\\",
+    "type": "project",
+    "license": "Apache-2.0",
+    "autoload": {
+        "psr-4": {
+            "Kkochetkov\\RdcCom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KKochetkov",
+            "email": "KKochetkov@rpkb.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

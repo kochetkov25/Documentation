@@ -1,0 +1,100 @@
+.copyButton{
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #4682B4;
+    color: #fff;
+    font-size: 14px;
+    transition: .6s;
+}
+
+.def{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.copyButton.active{
+    background-color: rgba(0,128,0,.6);
+}
+
+.copyButton:hover{
+    cursor: pointer;
+}
+
+.successText{
+    display: none;
+}
+
+.file__content p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    line-height: 1.5em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/*начало стили для табов, которые содержат контент*/
+.contabs{
+    position: relative;
+    word-wrap: break-word;
+}
+
+.contabs__list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.contabsTitle{
+    margin: auto;
+    justify-self: right;
+    margin-right: 0px;
+    font-weight: 500;
+}
+
+.contabs__item:not(:last-child){
+    margin-right: 2px;
+}
+
+.contabs__btn{
+    padding: 7px 31px ;
+    border: 1px solid #e0e0e0;
+    background-color: #4682B4;
+    font-size: 14px;
+    color:#fff;
+    cursor: pointer;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contabs__btn:hover{
+    background-color: #fff;
+    color:#4682B4;
+    border: 1px solid #e0e0e0;
+}
+.contabs__btn--active{
+    background-color: #fff;
+    color:#4682B4;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    pointer-events: none;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+}
+
+.contabs__content{
+    display: none;
+    background-color: #fff;
+}
+
+.contabs__content--active{
+    display: block;
+}
+/*конец стили для табов, которые содержат контент*/

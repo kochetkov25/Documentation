@@ -1,0 +1,127 @@
+.codeTemplate{
+    font-family: Hack-Regular;
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 15%);
+    background-color: #F2F2F2;
+    width:fit-content;
+    line-height: 1.2em;
+}
+
+.titleWrapper{
+    display: flex;
+    align-items: center;
+    min-width: 128px;
+}
+
+.NewContent h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: Hack-Regular; /* Гарнитура шрифта */
+    src: url(./../fonts/Hack-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/*соврачиваемые блоки на основной части страницы начало*/
+.TextContainer{
+    position: relative;    
+    padding: 0;
+    padding-bottom: 10px;
+    padding-top: 7px;
+    margin:0;
+    grid-column: 6/7;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.5em;
+ }
+
+ .TextContainer img{
+    padding-top: 10px;
+ }
+
+.NewNode{
+    margin-left: 18px;
+    zoom:1;
+}
+
+.NewIsRoot{
+    margin-left: 0;
+}
+
+ .NewExpand{
+    width: 9px;
+    height: 9px;
+    float: left;
+}
+
+.NewContent{
+    margin-left: 8px;
+    min-height: 18px;
+}
+
+.ExpandOpen .NewExpand{
+    background-image: url(./../img/minus_new.svg);
+}
+
+.ExpandClosed .NewExpand{
+    background-image: url(./../img/plus_new.svg);
+}
+
+.ExpandOpen .TextContainer{
+    display: block;
+}
+
+.ExpandClosed .TextContainer{
+    display: none;
+}
+
+.ExpandOpen .NewExpand, .ExpandClosed .NewExpand{
+    cursor: pointer;
+}
+/*соврачиваемые блоки на основной части страницы конец*/
+
+.syntax_content a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.syntax_content a:hover{
+    text-decoration: underline;
+}
+
+.name_content{
+    word-wrap: break-word;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.description_content{
+    height: auto;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.syntax_content{
+    height: auto;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.parameters_content{
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.return_values_content{
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.function_example_content{
+    word-wrap: break-word;
+    font-size: 16px;
+}

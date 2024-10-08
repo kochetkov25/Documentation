@@ -1,0 +1,90 @@
+/* .wrapperSubExmpTempContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.upMainContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.downMainContent{
+    display: flex;
+    justify-content: space-between;   
+}
+
+.upMainPic img{
+    padding-left: 15px;
+    vertical-align: middle;
+    padding-top: 38px;
+}
+
+.datContent{
+    padding-right: 5px;
+}
+
+.colorContent{
+    padding-left: 5px;
+} */
+.wrapperSubExmpTempContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pictureContent{
+    height: fit-content;
+}
+
+.pictureContent img{
+    padding-left: 15px;
+    vertical-align: middle;
+    padding-top: 55px;
+}
+
+.listOfFilesContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.NewContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.NewContent a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    border-bottom: none;
+}
+
+.NewContent a:hover{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    border-bottom: none;
+}
+
+.btnEXMP{
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+#refToArch{
+    display: none;
+    font-weight: lighter;
+}
+
+.refArch{
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+}
+
+.refArch:hover{
+    color: #9E9E9E;
+}
