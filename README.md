@@ -38,7 +38,7 @@ To set up the website locally, follow these steps to configure Composer and star
 Here are a few key pages of the documentation website:
 
 1. **Examples Page**:
-   ![Examples Page](public/for_git/examp.png)
+   ![Examples Page](public/for_git/exmp.png)
 
 2. **User Editing Page**:
    ![User Editing Page](public/for_git/users.png)
